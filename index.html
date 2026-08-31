@@ -1,218 +1,52 @@
 <!DOCTYPE html>
-<html lang="cs" class="scroll-smooth">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přijímačky? Easy!</title>
-    <!-- Tímto řádkem si bez jakékoliv instalace připojíme Tailwind -->
+    <title>Přijímačky? Easy! - Výběr předmětu</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col justify-center items-center p-6">
+    
+    <!-- Hlavička rozcestníku -->
+    <div class="text-center mb-12 mt-10">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            Přijímačky? <span class="text-blue-500">Easy!</span> ✌️
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-600">
+            Vyber si předmět, se kterým potřebuješ pomoct:
+        </p>
+    </div>
 
-<body class="bg-slate-50 font-sans text-slate-800">
+    <!-- Výběr předmětů -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl w-full mb-10">
+        
+        <!-- MATEMATIKA -->
+        <a href="/matika" class="group bg-white p-12 rounded-3xl shadow-md border-2 border-transparent hover:border-blue-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center block">
+            <div class="text-7xl mb-6 transform group-hover:scale-110 transition duration-300">📐</div>
+            <h2 class="text-3xl font-bold text-blue-900 mb-3 group-hover:text-blue-600 transition duration-300">Matematika</h2>
+            <p class="text-lg text-slate-500 font-medium">s Michalem</p>
+        </a>
 
-    <!-- 1. HLAVIČKA (Hero sekce) -->
-    <header class="bg-blue-50 py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 mb-6 tracking-tight">
-                Přijímačky? <span class="text-blue-500">Easy!</span> ✌️
-            </h1>
-            <p class="text-xl md:text-2xl text-blue-700 mb-10 leading-relaxed">
-                Individuální doučování matematiky v Brně. <br class="hidden md:block">
-                Srozumitelně, v klidu a bez nudy.
-            </p>
-            <!-- Tlačítko, které později pošle uživatele rovnou na formulář -->
-            <a href="#kontakt" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300">
-                Chci si domluvit doučování
+        <!-- ČEŠTINA -->
+        <!-- Místo [Jméno] doplň jméno kamarádky -->
+        <a href="/cestina" class="group bg-white p-12 rounded-3xl shadow-md border-2 border-transparent hover:border-rose-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center block">
+            <div class="text-7xl mb-6 transform group-hover:scale-110 transition duration-300">📚</div>
+            <h2 class="text-3xl font-bold text-rose-900 mb-3 group-hover:text-rose-600 transition duration-300">Čeština</h2>
+            <p class="text-lg text-slate-500 font-medium">se Silvou</p>
+        </a>
+
+        <!-- NĚCO JINÉHO (Zvadlá růže) -->
+        <div class="md:col-span-2 flex justify-center">
+            <!-- md:w-[calc(50%-1rem)] zaručí, že boxík bude naprosto stejně široký jako ty dva nad ním -->
+            <a href="/oboji" class="group bg-white p-12 rounded-3xl shadow-md border-2 border-transparent hover:border-slate-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center block w-full md:w-[calc(50%-1rem)]">
+                <div class="text-7xl mb-6 transform group-hover:scale-110 transition duration-300">🥀</div>
+                <h2 class="text-3xl font-bold text-slate-800 mb-3 group-hover:text-slate-600 transition duration-300">Obojí</h2>
+                <p class="text-lg text-slate-500 font-medium">S Michalem a Silvou</p>
             </a>
         </div>
-    </header>
 
-    <!-- 2. PROČ SI VYBRAT MĚ -->
-    <section class="py-16 px-4 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Proč do toho jít se mnou?</h2>
-        
-        <!-- Grid zajistí, že na mobilu budou boxíky pod sebou a na PC vedle sebe -->
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <!-- Bod 1 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 text-center">
-                <div class="text-4xl mb-4">🏫</div>
-                <h3 class="text-xl font-bold text-blue-900 mb-2">Praxe ze základky</h3>
-                <p class="text-slate-600">Učil jsem matematiku přímo na ZŠ. Vím přesně, kde se dělají chyby a jak látku vysvětlit lidsky.</p>
-            </div>
-            
-            <!-- Bod 2 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 text-center">
-                <div class="text-4xl mb-4">🤝</div>
-                <h3 class="text-xl font-bold text-blue-900 mb-2">Parťák, ne učitel</h3>
-                <p class="text-slate-600">Jsem vysokoškolák, rodičům vykám, ale se studenty si na hodinách tykáme. Přeci jen o tolik starší nejsem.</p>
-            </div>
-            
-            <!-- Bod 3 -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 text-center">
-                <div class="text-4xl mb-4">🎯</div>
-                <h3 class="text-xl font-bold text-blue-900 mb-2">Cermat na míru</h3>
-                <p class="text-slate-600">Netisknu jen slepě učebnice. Tvořím vlastní příklady přesně podle toho, co nám zrovna nejde.</p>
-            </div>
+    </div>
 
-        </div>
-    </section>
-    <!-- 3. JAK TO PROBÍHÁ -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Jak budeme postupovat?</h2>
-            <div class="space-y-8">
-                
-                <!-- Krok 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0 shadow-md">1</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">Úvodní diagnostika (90 minut)</h3>
-                        <p class="text-slate-600">Na první lekci si společně zkusíme vzorový test. Zjistím, co už perfektně umíš a kde naopak ztrácíme body. Ušetříme tím spoustu času do budoucna.</p>
-                    </div>
-                </div>
-
-                <!-- Krok 2 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0 shadow-md">2</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">Učení bez cestování</h3>
-                        <p class="text-slate-600">Přijedu za tebou domů kamkoliv po Brně, v dostupnosti MHD, nebo si zarezervujeme klidnou studovnu v knihovně. Odpadá ti tak stres s dojížděním.</p>
-                    </div>
-                </div>
-
-                <!-- Krok 3 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0 shadow-md">3</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">Pravidelné lekce (60 minut)</h3>
-                        <p class="text-slate-600">Další hodiny už jedeme přesně podle plánu. Procvičujeme konkrétní látku a počítáme příklady tak, abychom do jara všechno perfektně dohnali. </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-<!-- SEKCE O MNĚ -->
-<section class="py-16 px-4 max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Kdo tě bude učit?</h2>
-        
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-blue-100">
-            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
-                Ahoj! Jsem vysokoškolák, momentálně studuji kybernetiku na <strong>FEKT VUT v Brně</strong>. Dříve jsem studoval robotiku a automatizaci na <strong>SPŠSE a VOŠ Liberec</strong>. Kromě techniky mě ale vždycky táhla práce s lidmi a předávání znalostí.
-            </p>
-            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
-                V praxi jsem si to vyzkoušel jako učitel matematiky na základní škole. Učil jsem <strong>6., 7. a 9. třídy</strong> a probírali jsme spolu všechno možné – od zlomků a poměrů až po záludnou geometrii a goniometrii. 
-            </p>
-            <p class="text-slate-600 leading-relaxed text-lg">
-                Právě tam jsem zjistil, že mě neskutečně baví vidět ten moment, kdy žák látku konečně pochopí. A přesně tenhle pohodový a srozumitelný přístup chci přinést i na naše společné doučování.
-            </p>
-        </div>
-    </section>
-
-    <!-- HODNOCENÍ (Chatové bubliny) -->
-    <section class="py-16 px-4 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Co říkají moji bývalí žáci?</h2>
-            
-            <div class="space-y-6 max-w-2xl mx-auto flex flex-col">
-                
-                <!-- Bublina 1 (Zleva - bílá) -->
-                <div class="flex justify-start">
-                    <div class="bg-white p-5 rounded-3xl rounded-tl-none shadow-sm border border-slate-200 max-w-[85%] relative">
-                        <p class="text-slate-600 italic mb-2">„Mě si osobně toho naučil víc za ten měsíc než ostatní učitelé za ty 4 roky a fr jsem se těšil na tvoje hodiny.“</p>
-                        <p class="text-sm font-bold text-blue-900">— Kuba, 9. třída</p>
-                    </div>
-                </div>
-
-                <!-- Bublina 2 (Zprava - modrá) -->
-                <div class="flex justify-end">
-                    <div class="bg-blue-100 p-5 rounded-3xl rounded-tr-none shadow-sm max-w-[85%] relative">
-                        <p class="text-blue-900 italic mb-2">„Hodiny byly lehce pochopitelné a zábavnou formou, a přitom se z nich šlo naučit.“</p>
-                        <p class="text-sm font-bold text-blue-700 text-right">— Nicolas, 9. třída</p>
-                    </div>
-                </div>
-
-                <!-- Bublina 3 (Zleva - bílá) -->
-                <div class="flex justify-start">
-                    <div class="bg-white p-5 rounded-3xl rounded-tl-none shadow-sm border border-slate-200 max-w-[85%] relative">
-                        <p class="text-slate-600 italic mb-2">„Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Můžu jen doporučit.“</p>
-                        <p class="text-sm font-bold text-blue-900">— Klára, 7. třída</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- 4. CENÍK -->
-        <section class="py-16 px-4 bg-blue-50">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-blue-900 mb-12">Férové ceny</h2>
-                
-                <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                    
-                    <!-- Levý box - Diagnostika  -->
-                    <div class="bg-white p-8 rounded-3xl shadow-md border-2 border-blue-500 relative transform hover:-translate-y-1 transition duration-300">
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide">
-                            PRVNÍ KROK
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-700 mb-2">Úvodní lekce</h3>
-                        <p class="text-slate-500 mb-4">První zmapování terénu <br> (90-120 min)</p>
-                        <div class="text-4xl font-extrabold text-blue-900 mb-6">450 Kč</div>
-                    </div>
-                    
-                    <!-- Pravý box - Běžná lekce -->
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-blue-100 hover:shadow-md transition duration-300">
-                        <h3 class="text-xl font-bold text-slate-700 mb-2">Běžná lekce</h3>
-                        <p class="text-slate-500 mb-4">Pravidelná příprava <br> (60 min)</p>
-                        <div class="text-4xl font-extrabold text-blue-900 mb-6">300 Kč</div>
-                    </div>
-
-                </div>
-                
-            </div>
-        </section>
-    <!-- 5. KONTAKTNÍ FORMULÁŘ -->
-        <section id="kontakt" class="py-16 px-4 bg-white">
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-blue-600 rounded-3xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl">
-                    <div class="p-8 md:p-12 text-center text-white">
-                        <h2 class="text-3xl font-bold mb-4">Jdeme na to?</h2>
-                        <p class="text-blue-100 mb-8">Napiš mi a domluvíme si první nezávaznou diagnostickou lekci.</p>
-                        
-                        <!-- Samotný formulář -->
-                        <form action="https://formspree.io/f/mrpgblnz" method="POST" class="space-y-6 text-left">
-                            <div>
-                                <label for="jmeno_zak_zastupce" class="block text-sm font-medium text-blue-100 mb-1">Jméno zákonného zástupce</label>
-                                <input type="text" id="jmeno_zak_zastupce" name="Jméno zákonného zástupce" autocomplete="name" required class="w-full px-4 py-3 rounded-xl border-none text-slate-800 focus:ring-4 focus:ring-blue-300 outline-none" placeholder="Např. Jan Novák">
-                            </div>
-                             <div>
-                                <label for="jmeno_studenta" class="block text-sm font-medium text-blue-100 mb-1">Jméno studenta</label>
-                                <input type="text" id="jmeno_studenta" name="Jméno studenta" autocomplete="name" required class="w-full px-4 py-3 rounded-xl border-none text-slate-800 focus:ring-4 focus:ring-blue-300 outline-none" placeholder="Např. Pavel Novák">
-                            </div>
-                            <div>
-                                <label for="kontaktni_udaj" class="block text-sm font-medium text-blue-100 mb-1">E-mail nebo telefon</label>
-                                <input type="text" id="kontaktni_udaj" name="Kontaktní údaj" autocomplete="email" required class="w-full px-4 py-3 rounded-xl border-none text-slate-800 focus:ring-4 focus:ring-blue-300 outline-none" placeholder="Např. jan.novak@email.cz">
-                            </div>
-                            <div>
-                                <label for="telefon" class="block text-sm font-medium text-blue-100 mb-1">Telefon (nepovinné)</label>
-                                <input type="tel" id="telefon" name="Telefon" autocomplete="tel" class="w-full px-4 py-3 rounded-xl border-none text-slate-800 focus:ring-4 focus:ring-blue-300 outline-none" placeholder="Např. 777 123 456">
-                            </div>
-                            <div>
-                                <label for="zprava" class="block text-sm font-medium text-blue-100 mb-1">Zpráva</label>
-                                <textarea id="zprava" name="Zpráva" rows="4" class="w-full px-4 py-3 rounded-xl border-none text-slate-800 focus:ring-4 focus:ring-blue-300 outline-none" placeholder="Dobrý den, měl bych zájem o přípravu na přijímačky..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-white text-blue-600 font-bold py-4 rounded-xl text-lg hover:bg-blue-50 transition duration-300 shadow-md">
-                                Odeslat zprávu
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. PATIČKA -->
-        <footer class="bg-slate-900 text-slate-400 py-8 text-center">
-            <p>© 2026 Přijímačky? Easy! - Doučování matematiky v Brně</p>
-        </footer>
 </body>
+</html>
