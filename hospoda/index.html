@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starý hostinec | Sázava u Žďáru nad Sázavou</title>
+    <title>Naše Hospůdka | Kocourkov</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +33,34 @@
         }
     </script>
     
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        'rustic-cream': '#f9f6f0',
+                        'rustic-green': '#2c4c3b',
+                        'rustic-wood': '#8b5a2b',
+                        'rustic-dark': '#2d2a26',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(5px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         /* Custom scrollbar pro hlavní stránku */
         ::-webkit-scrollbar { width: 10px; }
@@ -45,7 +73,7 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
         .hero-pattern {
-            background-image: linear-gradient(rgba(44, 76, 59, 0.8), rgba(44, 76, 59, 0.8)), url('/img/hospoda-zepredu.jpeg');
+            background-image: linear-gradient(rgba(44, 76, 59, 0.8), rgba(44, 76, 59, 0.8)), url('img/hospoda-zepredu.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -65,7 +93,7 @@
     <path d="M4 11.5C4 11.5 7.5 14 12 14C16.5 14 20 11.5 20 11.5"></path>
     <path d="M12 21L12 22"></path>
 </svg>
-                        Starý hostinec
+                        Naše Hospůdka
                     </a>
                 </div>
                 
@@ -101,9 +129,9 @@
     <!-- Hero Section -->
     <header class="hero-pattern min-h-screen flex items-center justify-center pt-20">
         <div class="text-center px-4 max-w-4xl mx-auto">
-            <span class="text-rustic-wood font-semibold tracking-widest uppercase text-sm mb-4 block">Sázava u Žďáru nad Sázavou</span>
-            <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-6 drop-shadow-lg">Vítejte ve Starém hostinci</h1>
-            <p class="text-xl text-gray-200 mb-6 font-light max-w-2xl mx-auto">Poctivá hospoda ležící přímo u oblíbené cyklostezky Sázava - Přibyslav. Zastavte se na dobré pivo a něco na zub.</p>
+            <span class="text-rustic-wood font-semibold tracking-widest uppercase text-sm mb-4 block">Kocourkov</span>
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-6 drop-shadow-lg">Vítejte v Naší Hospůdce</h1>
+            <p class="text-xl text-gray-200 mb-6 font-light max-w-2xl mx-auto">Poctivá hospoda ležící přímo u oblíbené cyklostezky Kocourkov - Pejskov. Zastavte se na dobré pivo a něco na zub.</p>
 
 
 <!-- Oficiální Mapy.cz Badge -->
@@ -124,7 +152,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-rustic-green mb-6">O našem hostinci</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-rustic-green mb-6">O Naší Hospůdce</h2>
                     <p class="text-lg text-gray-700 mb-6 leading-relaxed">
                         Jsme tradiční venkovská hospoda s rodinnou atmosférou. Nacházíme se na strategickém místě přímo u oblíbené cyklostezky, což z nás dělá ideální zastávku pro výletníky i místní štamgasty.
                     </p>
@@ -134,17 +162,17 @@
                     
                     <div class="grid grid-cols-2 gap-6 mt-8">
                         <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
-                            <span class="block text-3xl font-serif font-bold text-rustic-wood mb-2">25</span>
+                            <span class="block text-3xl font-serif font-bold text-rustic-wood mb-2">50</span>
                             <span class="text-gray-600 text-sm uppercase tracking-wide">Míst uvnitř</span>
                         </div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
-                            <span class="block text-3xl font-serif font-bold text-rustic-wood mb-2">10</span>
+                            <span class="block text-3xl font-serif font-bold text-rustic-wood mb-2">25</span>
                             <span class="text-gray-600 text-sm uppercase tracking-wide">Míst v salónku</span>
                         </div>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="/img/zahradka.jpg" alt="Zahrádka a cyklisté" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full bg-stone-300">
+                    <img src="img/zahradka.jpg" alt="Zahrádka a cyklisté" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full bg-stone-300">
                     <div class="absolute -bottom-6 -left-6 bg-rustic-green text-white p-6 rounded-2xl shadow-xl max-w-xs">
                         <h4 class="font-serif font-bold text-xl mb-2">Letní zahrádka</h4>
                         <p class="text-sm text-emerald-100">V letních měsících otevíráme velkou venkovní zahrádku, ideální pro relaxaci na čerstvém vzduchu.</p>
@@ -153,84 +181,161 @@
             </div>
         </div>
     </section>
-
-    <!-- Nabídka Section -->
+<!-- Nabídka Section (Interaktivní s Tabulátory) -->
     <section id="nabidka" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-rustic-wood font-semibold tracking-widest uppercase text-sm mb-2 block">Co u nás ochutnáte</span>
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="text-center mb-12">
+                <span class="text-rustic-wood font-semibold tracking-widest uppercase text-sm mb-2 block">Poctivá kuchyně</span>
                 <h2 class="text-3xl md:text-5xl font-serif font-bold text-rustic-green">Jídelní a nápojový lístek</h2>
                 <div class="w-24 h-1 bg-rustic-wood mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Jídlo -->
-                <div class="bg-rustic-cream p-8 rounded-3xl shadow-sm border border-stone-100">
-                    <div class="w-14 h-14 bg-rustic-green rounded-2xl flex items-center justify-center mb-6 shadow-md">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
-                            <path d="M7 2v20"/>
-                            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
-                        </svg>
+            <!-- Navigace záložek -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-8 border-b border-stone-200 mb-10">
+                <button onclick="switchTab('chuťovky')" id="btn-chuťovky" class="menu-tab-btn px-4 py-3 font-serif font-bold text-lg md:text-xl text-rustic-wood border-b-2 border-rustic-wood transition-colors">
+                    Něco k pivu
+                </button>
+                <button onclick="switchTab('hlavní')" id="btn-hlavní" class="menu-tab-btn px-4 py-3 font-serif font-bold text-lg md:text-xl text-gray-400 border-b-2 border-transparent hover:text-rustic-green transition-colors">
+                    Hlavní jídla
+                </button>
+                <button onclick="switchTab('nápoje')" id="btn-nápoje" class="menu-tab-btn px-4 py-3 font-serif font-bold text-lg md:text-xl text-gray-400 border-b-2 border-transparent hover:text-rustic-green transition-colors">
+                    Nápoje z čepu
+                </button>
+            </div>
+
+            <!-- OBSAH ZÁLOŽEK -->
+            <div class="bg-rustic-cream p-6 md:p-10 rounded-3xl shadow-sm border border-stone-100">
+
+                <!-- 1. ZÁLOŽKA: CHUŤOVKY -->
+                <div id="tab-chuťovky" class="menu-tab-content animate-fade-in">
+                    <div class="space-y-6">
+                        <!-- Položka 1 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Domácí utopenec s cibulí</h4>
+                                <span class="font-bold text-rustic-wood ml-4">75 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">2ks špekáčků v pikantním sladkokyselém nálevu, feferonka, čerstvý chléb</p>
+                        </div>
+                        <!-- Položka 2 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Nakládaný hermelín</h4>
+                                <span class="font-bold text-rustic-wood ml-4">85 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">S vlašskými ořechy, česnekem a chilli papričkou, chléb</p>
+                        </div>
+                        <!-- Položka 3 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Domácí svačinová polévka</h4>
+                                <span class="font-bold text-rustic-wood ml-4">65 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Poctivý vývar, nebo gulášová (podle denní nabídky), pečivo</p>
+                        </div>
+                        <!-- Položka 4 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Klobása z komína</h4>
+                                <span class="font-bold text-rustic-wood ml-4">95 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Ohřívaná klobása z místního řeznictví, hořčice, křen, chléb</p>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-rustic-dark mb-6">Něco na zub</h3>
-                    <ul class="space-y-4">
-                        <li class="flex justify-between items-center border-b border-stone-200 pb-2"><span class="font-medium">Domácí svačinová polévka</span></li>
-                        <li class="flex justify-between items-center border-b border-stone-200 pb-2"><span class="font-medium">Utopenci & Nakládaný hermelín</span></li>
-                        <li class="flex justify-between items-center border-b border-stone-200 pb-2"><span class="font-medium">Klobásy z komína</span></li>
-                        <li class="flex justify-between items-center border-b border-stone-200 pb-2"><span class="font-medium text-rustic-wood">Legendární langoše</span></li>
-                        <li class="flex justify-between items-center border-b border-stone-200 pb-2"><span class="font-medium">Burgery & Pizza</span></li>
-                        <li class="flex justify-between items-center border-b border-stone-200 pb-2"><span class="font-medium">Smažené (stripsy, květák, sýr)</span></li>
-                        <li class="flex justify-between items-center pb-2"><span class="font-medium">Ovocné knedlíky</span></li>
-                    </ul>
                 </div>
 
-                <!-- Pivo -->
-                <div class="bg-rustic-cream p-8 rounded-3xl shadow-sm border border-stone-100">
-                    <div class="w-14 h-14 bg-rustic-wood rounded-2xl flex items-center justify-center mb-6 shadow-md">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 11h1a3 3 0 0 1 0 6h-1"/>
-                            <path d="M9 12v6"/>
-                            <path d="M13 12v6"/>
-                            <path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/>
-                            <path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/>
-                        </svg>
+                <!-- 2. ZÁLOŽKA: HLAVNÍ JÍDLA -->
+                <div id="tab-hlavní" class="menu-tab-content hidden animate-fade-in">
+                    <div class="space-y-6">
+                        <!-- Položka 1 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Naše legendární langoše</h4>
+                                <span class="font-bold text-rustic-wood ml-4">110 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Smažený langoš s česnekem, kečupem, tatarkou a hromadou sýra</p>
+                        </div>
+                        <!-- Položka 2 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Náš Hovězí Burger</h4>
+                                <span class="font-bold text-rustic-wood ml-4">185 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">150g mletého hovězího masa, slanina, cheddar, karamelizovaná cibulka, naše BBQ omáčka</p>
+                        </div>
+                        <!-- Položka 3 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Smažený sýr</h4>
+                                <span class="font-bold text-rustic-wood ml-4">155 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">120g smaženého eidamu, hranolky, domácí tatarská omáčka</p>
+                        </div>
+                        <!-- Položka 4 -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-lg text-rustic-dark">Smažené kuřecí stripsy</h4>
+                                <span class="font-bold text-rustic-wood ml-4">165 Kč</span>
+                            </div>
+                            <p class="text-sm text-gray-600">150g kuřecích prsou v křupavé strouhance, hranolky, sweet chilli omáčka</p>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-rustic-dark mb-6">Z pípy</h3>
-                    <ul class="space-y-4">
-                        <li class="border-b border-stone-200 pb-4">
-                            <span class="font-bold block text-lg mb-1">Havlíčkobrodský Rebel</span>
-                            <span class="text-sm text-gray-600">Tradiční a Originál – stálice na našem čepu.</span>
-                        </li>
-                        <li class="pb-2 mt-4">
-                            <span class="font-bold block text-lg mb-1 text-rustic-wood">Víkendové speciály</span>
-                            <span class="text-sm text-gray-600">O víkendech pravidelně narážíme piva z malých soukromých pivovarů. Zeptejte se obsluhy, co zrovna točíme!</span>
-                        </li>
-                    </ul>
                 </div>
 
-                <!-- Nealko -->
-                <div class="bg-rustic-cream p-8 rounded-3xl shadow-sm border border-stone-100">
-                    <div class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center mb-6 shadow-md">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
+                <!-- 3. ZÁLOŽKA: NÁPOJE -->
+                <div id="tab-nápoje" class="menu-tab-content hidden animate-fade-in">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        
+                        <!-- Pivo -->
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-rustic-green mb-4 border-b border-stone-200 pb-2">Pivo z čepu</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-medium text-rustic-dark">Kozel 11 (0,5 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">38 Kč</span>
+                                </div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-medium text-rustic-dark">Kozel 11 (0,3 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">25 Kč</span>
+                                </div>
+                                <div class="flex justify-between items-baseline pt-2">
+                                    <span class="font-medium text-rustic-dark">Pilsner Urquell (0,5 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">65 Kč</span>
+                                </div>
+                                <div class="flex justify-between items-baseline mt-4 pt-4 border-t border-stone-200">
+                                    <span class="font-medium text-rustic-wood">Víkendový speciál</span>
+                                    <span class="text-sm text-gray-500 italic">Dle denní nabídky</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nealko -->
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-rustic-green mb-4 border-b border-stone-200 pb-2">Nealkoholické</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-medium text-rustic-dark">Točená limo ZON (0,5 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">35 Kč</span>
+                                </div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-medium text-rustic-dark">Točená limo ZON (0,3 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">25 Kč</span>
+                                </div>
+                                <div class="flex justify-between items-baseline pt-2">
+                                    <span class="font-medium text-rustic-dark">Točené Mango (0,5 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">38 Kč</span>
+                                </div>
+                                <div class="flex justify-between items-baseline pt-2">
+                                    <span class="font-medium text-rustic-dark">Birell pomelo-grep (0,5 l)</span>
+                                    <span class="font-bold text-gray-700 ml-4">40 Kč</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-rustic-dark mb-6">Pro řidiče a děti</h3>
-                    <ul class="space-y-4">
-                        <li class="border-b border-stone-200 pb-4">
-                            <span class="font-bold block text-lg mb-1">Točená limonáda ZON</span>
-                            <span class="text-sm text-gray-600">Tradiční třebíčská limonáda, která osvěží.</span>
-                        </li>
-                        <li class="pb-2 mt-4">
-                            <span class="font-bold block text-lg mb-1">Točené mango</span>
-                            <span class="text-sm text-gray-600">Sladké a exotické osvěžení nejen pro nejmenší.</span>
-                        </li>
-                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
@@ -306,17 +411,17 @@
                 
                 <!-- Posuvný kontejner -->
                 <div id="slider-nyni" class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory no-scrollbar scroll-smooth">
-                    <img src="/img/hospoda-zepredu.jpeg" alt="Hostinec zepředu" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/okenko-1.jpeg" alt="Okénko" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/okenko-2.jpeg" alt="Okénko z blízka" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/zahradka-od-brany.jpeg" alt="Zahrádka od brány" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/zahradka-od-jablone.jpeg" alt="Zahrádka od jabloně" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/hostinec-zepredu.jpg" alt="Hostinec" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/hostinec-z-boku.jpg" alt="Hostinec z boku" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/hostinec-uvnitr_1.jpg" alt="Uvnitř hostince" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/hostinec-uvnitr_2.jpg" alt="Uvnitř hostince detail" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/zahradka_1.jpg" alt="Zahrádka s posezením" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
-                    <img src="/img/zahradka_2.jpg" alt="Zahrádka u okénka" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/hospoda-zepredu.jpeg" alt="Hostinec zepředu" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/okenko-1.jpeg" alt="Okénko" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/okenko-2.jpeg" alt="Okénko z blízka" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/zahradka-od-brany.jpeg" alt="Zahrádka od brány" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/zahradka-od-jablone.jpeg" alt="Zahrádka od jabloně" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/hostinec-zepredu.jpg" alt="Hostinec" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/hostinec-z-boku.jpg" alt="Hostinec z boku" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/hostinec-uvnitr_1.jpg" alt="Uvnitř hostince" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/hostinec-uvnitr_2.jpg" alt="Uvnitř hostince detail" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/zahradka_1.jpg" alt="Zahrádka s posezením" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <img src="img/zahradka_2.jpg" alt="Zahrádka u okénka" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity">
                 </div>
             </div>
 
@@ -337,11 +442,11 @@
                 
                 <!-- Posuvný kontejner -->
                 <div id="slider-kdysi" class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory no-scrollbar scroll-smooth">
-                    <img src="/img/hostinec.jpg" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
-                    <img src="/img/lacinuv-hostinec_1.png" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
-                    <img src="/img/pohlednice-sazava.png" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
-                    <img src="/img/lacinuv-hostinec_2.png" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
-                    <img src="/img/hostinec-1964.jpg" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
+                    <img src="img/hostinec.jpg" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
+                    <img src="img/lacinuv-hostinec_1.png" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
+                    <img src="img/pohlednice-sazava.png" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
+                    <img src="img/lacinuv-hostinec_2.png" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
+                    <img src="img/hostinec-1964.jpg" alt="Hostinec kdysi" onclick="openLightbox(this)" class="shrink-0 w-72 md:w-80 aspect-[4/3] object-cover rounded-xl bg-stone-300 shadow-sm snap-center cursor-pointer hover:opacity-90 transition-opacity filter sepia-[.3]">
                 </div>
             </div>
         </div>
@@ -368,7 +473,7 @@
                 <h3 class="text-2xl font-bold text-rustic-dark mb-3">Jsme aktivní na sítích!</h3>
                 <p class="text-stone-600 mb-6 leading-relaxed">Aby vám neutekla žádná naše akce, víkendový speciál, rozloučení s létem nebo fotky z proběhlých koncertů, sledujte naši stránku. Všechny novinky tam dáváme jako první.</p>
                 
-                <a href="https://www.facebook.com/profile.php?id=61557508328382" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-md w-full sm:w-auto">
+                <a href="https://www.facebook.com/CT24.cz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-md w-full sm:w-auto">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     Přejít na náš Facebook
                 </a>
@@ -390,7 +495,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg">Adresa</h4>
-                                <p class="text-gray-600">Sázava 29<br>592 11 Sázava u Žďáru nad Sázavou</p>
+                                <p class="text-gray-600">Kocourkov 29<br>592 11 Kocourkov</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -399,7 +504,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg">Telefon</h4>
-                                <a href="tel:+420736626499" class="text-gray-600 hover:text-rustic-wood transition-colors">+420 736 626 499</a>
+                                <a href="tel:+420736626499" class="text-gray-600 hover:text-rustic-wood transition-colors">+420 999 999 999</a>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -408,7 +513,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg">E-mail</h4>
-                                <a href="mailto:StaryHostinec@seznam.cz" class="text-gray-600 hover:text-rustic-wood transition-colors">StaryHostinec@seznam.cz</a>
+                                <a href="mailto:NaseHospudka@seznam.cz" class="text-gray-600 hover:text-rustic-wood transition-colors">NaseHospudka@seznam.cz</a>
                             </div>
                         </div>
                     </div>
@@ -425,7 +530,7 @@
                 </div>
                 <div class="lg:w-1/2 relative min-h-[400px]">
                     <iframe 
-                        src="https://maps.google.com/maps?q=Sázava%2029,%20592%2011%20Sázava&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        src="https://maps.google.com/maps?q=Kocourkov%2029,%20592%2011%20Kocourkov&t=&z=14&ie=UTF8&iwloc=&output=embed" 
                         class="absolute inset-0 w-full h-full border-0" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -438,7 +543,7 @@
 
     <!-- Footer -->
     <footer class="bg-rustic-dark text-stone-400 py-8 text-center">
-        <p>&copy; 2026 Starý hostinec, Sázava u Žďáru nad Sázavou. Všechna práva vyhrazena.</p>
+        <p>&copy; 2026 Naše Hospůdka, Kocourkov. Všechna práva vyhrazena.</p>
     </footer>
 
     <!-- LIGHTBOX (Skryté tmavé okno pro zvětšení fotky s karuselem) -->
@@ -562,6 +667,29 @@
             if (e.key === "ArrowRight") navigateLightbox(1);
             if (e.key === "ArrowLeft") navigateLightbox(-1);
         });
+        // Funkce pro přepínání záložek v sekci Nabídka
+        function switchTab(tabName) {
+            // Skryje všechny záložky
+            const contents = document.querySelectorAll('.menu-tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Zobrazí kliknutou záložku
+            document.getElementById('tab-' + tabName).classList.remove('hidden');
+
+            // Resetuje styl všech tlačítek na "neaktivní" (šedá)
+            const buttons = document.querySelectorAll('.menu-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('text-rustic-wood', 'border-rustic-wood');
+                btn.classList.add('text-gray-400', 'border-transparent');
+            });
+
+            // Zvýrazní kliknuté tlačítko
+            const activeBtn = document.getElementById('btn-' + tabName);
+            activeBtn.classList.remove('text-gray-400', 'border-transparent');
+            activeBtn.classList.add('text-rustic-wood', 'border-rustic-wood');
+        }
     </script>
 </body>
 </html>
