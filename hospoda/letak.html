@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leták - Starý hostinec</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        'rustic-cream': '#f9f6f0',
+                        'rustic-green': '#2c4c3b',
+                        'rustic-wood': '#8b5a2b',
+                        'rustic-dark': '#2d2a26',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Nastavení přesně na A4 */
+        @page { size: A4; margin: 0; }
+        
+        /* Zajištění tisku barev na pozadí */
+        body { 
+            -webkit-print-color-adjust: exact; 
+            print-color-adjust: exact; 
+        }
+        
+        /* Třída pro simulaci papíru */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background-color: #f9f6f0;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Chování pro náhled na monitoru */
+        @media screen {
+            body { 
+                background-color: #2d2a26; 
+                padding: 2rem; 
+                display: flex; 
+                justify-content: center; 
+            }
+            .a4-page { 
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
+            }
+        }
+        
+        /* Skrytí stínů při tisku */
+        @media print {
+            body { background-color: transparent; padding: 0; }
+            .a4-page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a4-page">
+        <!-- VODOZNAK NÁHLED (Před finálním předáním stačí tento blok smazat) -->
+    <div id="watermark" class="absolute inset-0 z-50 pointer-events-none flex items-center justify-center overflow-hidden">
+        <div class="text-[200px] font-black text-black/30 -rotate-45 select-none whitespace-nowrap tracking-widest mix-blend-multiply">
+            NÁHLED
+        </div>
+    </div>
+        <!-- HLAVIČKA (menší odsazení) -->
+        <div class="bg-rustic-green text-white p-6 flex flex-col items-center justify-center text-center border-b-[10px] border-rustic-wood">
+            <svg class="w-12 h-12 text-rustic-wood mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11.5 2C11.5 2 11.5 4.5 9 6.5C6.5 8.5 4 8.5 4 11.5C4 16 7.5 21 12 21C16.5 21 20 16 20 11.5C20 8.5 17.5 8.5 15 6.5C12.5 4.5 12.5 2 12.5 2L11.5 2Z"></path>
+                <path d="M4 11.5C4 11.5 7.5 14 12 14C16.5 14 20 11.5 20 11.5"></path>
+                <path d="M12 21L12 22"></path>
+            </svg>
+            <h1 class="font-serif text-5xl font-bold tracking-wider mb-2">Starý hostinec</h1>
+            <p class="text-lg text-emerald-100 font-light tracking-widest uppercase">Sázava u Žďáru nad Sázavou</p>
+        </div>
+
+        <!-- HLAVNÍ FOTKA (Snížená výška) -->
+<div class="w-full h-[65mm] relative">
+    <!-- Změna: object-top nahrazeno za object-[center_70%] pro přesné zacílení na budovu -->
+    <img src="img/hospoda-zepredu.jpeg" alt="Starý hostinec" class="w-full h-full object-cover object-[center_70%]">
+    
+    <div class="absolute inset-0 bg-gradient-to-t from-[#2d2a26]/95 via-[#2d2a26]/40 to-transparent flex items-end justify-center pb-6 px-6 text-center">
+        <h2 class="text-white font-serif text-4xl font-bold drop-shadow-xl leading-tight">
+            Zastavte se na jedno<br> 
+            <span class="text-amber-500">točené</span> a něco na zub!
+        </h2>
+    </div>
+</div>
+        <!-- NABÍDKA -->
+        <div class="flex-grow px-10 py-6 flex flex-col justify-center">
+            
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <!-- Sloupec Pivo -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm text-center">
+                    <svg class="w-12 h-12 mx-auto text-rustic-wood mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 11h1a3 3 0 0 1 0 6h-1"/>
+                        <path d="M9 12v6"/>
+                        <path d="M13 12v6"/>
+                        <path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/>
+                        <path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/>
+                    </svg>
+                    <h3 class="font-bold font-serif text-xl text-rustic-dark mb-2">Z pípy</h3>
+                    <p class="text-stone-600 text-base">Havlíčkobrodský Rebel a pravidelné víkendové speciály z malých pivovarů.</p>
+                </div>
+                
+                <!-- Sloupec Jídlo -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm text-center">
+                    <svg class="w-12 h-12 mx-auto text-rustic-wood mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+                        <path d="M7 2v20"/>
+                        <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+                    </svg>
+                    <h3 class="font-bold font-serif text-xl text-rustic-dark mb-2">K zakousnutí</h3>
+                    <p class="text-stone-600 text-base">Legendární langoše, burgery, utopenci nebo poctivá domácí polévka.</p>
+                </div>
+            </div>
+
+            <!-- Tři ikony v řadě -->
+            <div class="flex justify-around items-center bg-stone-100 p-5 rounded-2xl border border-stone-200">
+                <div class="text-center flex flex-col items-center">
+                    <svg class="w-8 h-8 text-rustic-wood mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg>
+                    <span class="font-bold text-sm text-rustic-dark">Letní zahrádka</span>
+                </div>
+                <div class="w-px h-10 bg-stone-300"></div>
+                <div class="text-center flex flex-col items-center">
+                    <svg class="w-8 h-8 text-rustic-wood mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+                    <span class="font-bold text-sm text-rustic-dark">U cyklostezky</span>
+                </div>
+                <div class="w-px h-10 bg-stone-300"></div>
+                <div class="text-center flex flex-col items-center">
+                    <svg class="w-8 h-8 text-rustic-wood mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.955-1.45-2.344-2.5"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"/></svg>
+                    <span class="font-bold text-sm text-rustic-dark">Psi vítáni</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PATIČKA S QR KÓDEM NA TRASU -->
+        <div class="bg-rustic-dark text-white p-8 flex items-center justify-between mt-auto">
+            <div class="max-w-[70%]">
+                <h4 class="font-serif text-3xl font-bold text-rustic-wood mb-2">Zastavte se na osvěžení!</h4>
+                <p class="text-stone-300 text-base mb-4 leading-relaxed">Namiřte foťák v mobilu na QR kód vedle. Otevře se Vám trasa přímo k nám na zahrádku.</p>
+                
+                <div class="border-t border-stone-600 pt-3 mt-2">
+                    <p class="font-bold text-lg mb-1 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-rustic-wood" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        www.staryhostinec.cz
+                    </p>
+                    <p class="text-stone-400 text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 text-rustic-wood" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        Sázava 29, 592 11 Sázava u Žďáru nad Sázavou
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-3 rounded-xl shadow-lg shrink-0">
+                <!-- QR kód s URL kódovaným odkazem na Mapy.cz plánovač -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fmapy.cz%2Ftrasa%3Fdest%3D13127527%26destType%3Dfirm" alt="QR Kód na trasu" class="w-32 h-32">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
