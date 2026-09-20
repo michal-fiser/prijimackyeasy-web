@@ -215,7 +215,31 @@
                 </div>
             </div>
         </section>
+<a href="#nahoru" id="scrollBtn" class="opacity-0 pointer-events-none fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 z-50 flex items-center justify-center group" title="Zpět nahoru">
+        <svg class="w-7 h-7 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </a>
 
+    <script>
+        const scrollBtn = document.getElementById('scrollBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollBtn.classList.add('opacity-100');
+            } else {
+                scrollBtn.classList.add('opacity-0', 'pointer-events-none');
+                scrollBtn.classList.remove('opacity-100');
+            }
+        });
+
+        document.querySelectorAll('a[href="#nahoru"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
         <!-- 6. PATIČKA -->
         <footer class="bg-slate-900 text-slate-400 py-8 text-center">
             <p>© 2026 Přijímačky? Easy! - Doučování matematiky v Brně</p>

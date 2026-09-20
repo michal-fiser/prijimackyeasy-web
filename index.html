@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,12 @@
     <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col justify-center items-center p-6">
+<body id="nahoru" class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col justify-center items-center p-6 relative">
     
     <!-- Hlavička rozcestníku -->
     <div class="text-center mb-12 mt-10">
         <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Přijímačky? <span class="text-blue-500">Easy!</span> ✌️
+            Přijímačky? <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-rose-500">Easy!</span> ✌️
         </h1>
         <p class="text-xl md:text-2xl text-slate-600">
             Vyber si předmět, se kterým potřebuješ pomoct:
@@ -29,13 +29,11 @@
     </div>
 
     <!-- Výběr předmětů -->
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl w-full mb-10">
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl w-full mb-10 mx-auto">
         
         <!-- MATEMATIKA -->
         <a href="/matika" class="group bg-white p-12 rounded-3xl shadow-md border-2 border-transparent hover:border-blue-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center block relative overflow-hidden z-10">
-            <!-- Pozadí po najetí myší (Světle modrá) -->
             <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition duration-300 -z-10"></div>
-            
             <div class="text-7xl mb-6 transform group-hover:scale-110 transition duration-300">📐</div>
             <h2 class="text-3xl font-bold text-blue-900 mb-3 group-hover:text-blue-600 transition duration-300">Matematika</h2>
             <p class="text-lg text-slate-500 font-medium">s Michalem</p>
@@ -43,17 +41,81 @@
 
         <!-- ČEŠTINA -->
         <a href="/cestina" class="group bg-white p-12 rounded-3xl shadow-md border-2 border-transparent hover:border-rose-500 hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center block relative overflow-hidden z-10">
-            <!-- Pozadí po najetí myší (Světle růžová) -->
             <div class="absolute inset-0 bg-rose-50 opacity-0 group-hover:opacity-100 transition duration-300 -z-10"></div>
-            
             <div class="text-7xl mb-6 transform group-hover:scale-110 transition duration-300">📚</div>
             <h2 class="text-3xl font-bold text-rose-900 mb-3 group-hover:text-rose-600 transition duration-300">Čeština</h2>
             <p class="text-lg text-slate-500 font-medium">se Silvou</p>
         </a>
 
-        </div>
-
     </div>
 
+    <!-- Kdo jsme -->
+    <section class="py-16 px-4 max-w-4xl mx-auto w-full">
+        <h2 class="text-3xl font-bold text-center text-purple-900 mb-10">Kdo jsme?</h2>
+        
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-purple-100 relative overflow-hidden">
+            <!-- Sjednocující horní linka (Modrá -> Fialová -> Růžová) -->
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-purple-400 to-rose-400"></div>
+            
+            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                Jsme dvojice studentů, <strong class="text-purple-900">Michal a Silva</strong>. Oba nás naplňuje předávat znalosti ostatním, a tak jsme se při studiu rozhodli spustit tento projekt. Oba totiž chceme, aby tvoje <strong>PŘIJÍMAČKY</strong> byly <strong class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-rose-500">EASY!</strong>
+            </p>
+            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                <strong class="text-blue-700">Michal</strong> se věnuje doučování matematiky. Už od střední školy rád pomáhal spolužákům s přípravou na testy a ostatní zkoušky. Poté si to zkusil i na základní škole a zjistil, že ho to učení opravdu naplňuje.
+            </p>
+            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                <strong class="text-rose-700">Silva</strong> je absolventkou gymnázia. Po maturitě se rozhodla studovat Český jazyk a literaturu, ale nakonec přestoupila na psychologii, protože ji vždy lákala touha pomáhat lidem. Tím její láska k češtině nezanikla. Ba naopak, propojila se právě s touhou pomáhat ostatním.
+            </p>
+            <p class="text-slate-600 mb-8 leading-relaxed text-lg">
+                Více o nás se dozvíš na našich individuálních stránkách, které najdeš výše. 
+            </p>
+            <div class="text-center p-4 bg-purple-50 rounded-2xl">
+                <p class="text-purple-900 text-xl font-bold mb-4">
+                    Tak neváhej a vyber si předmět, se kterým potřebuješ pomoct!
+                </p>
+                <!-- Standardní tlačítko zpět -->
+                <a href="#nahoru" class="inline-block bg-white text-purple-700 font-bold py-3 px-8 rounded-full border-2 border-purple-200 hover:border-purple-500 hover:text-purple-900 transition-colors shadow-sm">
+                    Zpět na výběr předmětů
+                </a>
+            </div>
+        </div>
+    </section>
+    </section>
+    <a href="#nahoru" id="scrollBtn" class="opacity-0 pointer-events-none fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-gradient-to-r from-blue-500 via-purple-500 to-rose-500 text-white p-3 rounded-full shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 z-50 flex items-center justify-center group" title="Zpět nahoru">
+        <svg class="w-7 h-7 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </a>
+
+
+    <script>
+        // 1. Zobrazení/skrytí plovoucího tlačítka podle scrollování
+        const scrollBtn = document.getElementById('scrollBtn');
+        
+        window.addEventListener('scroll', () => {
+            // Pokud odscrolluješ více než 300px dolů, tlačítko se objeví
+            if (window.scrollY > 300) {
+                scrollBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollBtn.classList.add('opacity-100');
+            } else {
+                // Pokud vyjedeš zase nahoru, tlačítko zmizí
+                scrollBtn.classList.add('opacity-0', 'pointer-events-none');
+                scrollBtn.classList.remove('opacity-100');
+            }
+        });
+
+        // 2. Plynulé scrollování bez změny URL v adresním řádku
+        document.querySelectorAll('a[href="#nahoru"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
