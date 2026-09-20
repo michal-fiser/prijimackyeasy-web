@@ -17,19 +17,25 @@
     </div>
     <!-- 1. HLAVIČKA (Hero sekce) -->
     <header class="bg-blue-50 py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 mb-6 tracking-tight">
-                Přijímačky? <span class="text-blue-500">Easy!</span> ✌️
-            </h1>
-            <p class="text-xl md:text-2xl text-blue-700 mb-10 leading-relaxed">
-                Individuální doučování matematiky v Brně. <br class="hidden md:block">
-                Srozumitelně, v klidu a bez nudy.
-            </p>
-  
-            <a href="#kontakt" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300">
-                Chci si domluvit doučování
-            </a>
-        </div>
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 mb-6 tracking-tight">
+                    Přijímačky? <span class="text-blue-500">Easy!</span> ✌️
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-700 mb-10 leading-relaxed">
+                    Individuální doučování matematiky v Brně. <br class="hidden md:block">
+                    Srozumitelně, v klidu a bez nudy.
+                </p>
+                
+                <!-- Kontejner pro tlačítka (vedle sebe na PC, pod sebou na mobilu) -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#kontakt" class="bg-blue-600 hover:bg-blue-700 text-white border-2 border-transparent font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 w-full sm:w-auto">
+                        Chci si domluvit doučování
+                    </a>
+                    <a href="#cenik" class="bg-white hover:bg-blue-50 text-blue-600 border-2 border-blue-600 font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 w-full sm:w-auto">
+                        Ceník hodin
+                    </a>
+                </div>
+            </div>
     </header>
 
     <!-- 2. PROČ SI VYBRAT MĚ -->
@@ -144,7 +150,7 @@
         </div>
     </section>
     <!-- 4. CENÍK -->
-        <section class="py-16 px-4 bg-blue-50">
+        <section id="cenik" class="py-16 px-4 bg-blue-50">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl font-bold text-blue-900 mb-12">Férové ceny</h2>
                 

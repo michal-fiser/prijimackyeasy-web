@@ -25,10 +25,16 @@
                 Individuální doučování češtiny v Brně. <br class="hidden md:block">
                 Srozumitelně, v klidu a bez nudy.
             </p>
-            <!-- Tlačítko, které později pošle uživatele rovnou na formulář -->
-            <a href="#kontakt" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300">
-                Chci si domluvit doučování
-            </a>
+            
+            <!-- Kontejner pro tlačítka (vedle sebe na PC, pod sebou na mobilu) -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#kontakt" class="bg-rose-600 hover:bg-rose-700 text-white border-2 border-transparent font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 w-full sm:w-auto">
+                    Chci si domluvit doučování
+                </a>
+                <a href="#cenik" class="bg-white hover:bg-rose-50 text-rose-600 border-2 border-rose-600 font-bold py-4 px-8 rounded-full text-lg shadow-lg transition duration-300 w-full sm:w-auto">
+                    Ceník hodin
+                </a>
+            </div>
         </div>
     </header>
 
@@ -123,7 +129,7 @@
 
 
     <!-- 4. CENÍK -->
-    <section class="py-16 px-4 bg-rose-50">
+    <section id="cenik" class="py-16 px-4 bg-rose-50">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-rose-900 mb-12">Férové ceny</h2>
             
