@@ -8,5 +8,6 @@
   </defs>
   
   <rect width="100" height="100" rx="25" fill="url(#grad-cestina)" />
-  <text x="50" y="54" font-size="55" text-anchor="middle" dominant-baseline="middle">📚</text>
+  <!-- Stejné emoji prstů -->
+  <text x="50" y="54" font-size="55" text-anchor="middle" dominant-baseline="middle">✌️</text>
 </svg>
