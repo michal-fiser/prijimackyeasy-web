@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leták - Starý hostinec</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        'rustic-cream': '#f9f6f0',
+                        'rustic-green': '#2c4c3b',
+                        'rustic-wood': '#8b5a2b',
+                        'rustic-dark': '#2d2a26',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Nastavení formátu A4 a odstranění okrajů pro tisk */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            background-color: #52525b; /* Tmavé pozadí pro zobrazení na monitoru */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 0;
+        }
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background-color: #f9f6f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Úpravy přímo pro tisk do PDF */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .a4-page {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Samotný A4 leták -->
+    <div class="a4-page">
+        
+        <!-- Horní polovina: Velká fotka a nadpis -->
+        <div class="relative h-[45%] w-full">
+            <img src="img/hospoda-zepredu.jpeg" alt="Naše Hospůdka" class="w-full h-full object-cover">
+            
+            <!-- Tmavý přechod, aby byl text dobře čitelný -->
+            <div class="absolute inset-0 bg-gradient-to-t from-rustic-dark/90 via-rustic-dark/30 to-transparent"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-10 text-center">
+                <span class="text-amber-500 font-bold tracking-widest uppercase text-sm mb-2 block">Zastavte se u nás</span>
+                <h1 class="text-5xl font-serif font-bold text-white leading-tight drop-shadow-md">
+                    Naše Hospůdka<br>Kocourkov
+                </h1>
+            </div>
+        </div>
+
+        <!-- Střední část: Lákadla a ikony -->
+        <div class="flex-grow px-12 py-10 flex flex-col justify-center gap-8">
+            <p class="text-center text-xl text-rustic-dark font-medium leading-relaxed mb-4">
+                Poctivá venkovská hospoda přímo u cyklostezky. Skvělé pivo, domácí chuťovky a parádní letní zahrádka pro celou rodinu.
+            </p>
+            
+            <div class="space-y-6">
+                <!-- Pivo -->
+                <div class="flex items-center gap-6">
+                    <div class="w-16 h-16 rounded-full bg-rustic-wood flex items-center justify-center shrink-0 shadow-md">
+                        <span class="text-3xl">🍺</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-rustic-green mb-1">Poctivě z čepu</h3>
+                        <p class="text-gray-600">Tradiční značky piva a pravidelné víkendové speciály z malých pivovarů.</p>
+                    </div>
+                </div>
+                
+                <!-- Jídlo -->
+                <div class="flex items-center gap-6">
+                    <div class="w-16 h-16 rounded-full bg-rustic-green flex items-center justify-center shrink-0 shadow-md">
+                        <span class="text-3xl">🌭</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-rustic-wood mb-1">Něco k zakousnutí</h3>
+                        <p class="text-gray-600">Domácí utopenci, nakládaný hermelín, klobásy, legendární langoše a další chuťovky.</p>
+                    </div>
+                </div>
+                
+                <!-- Akce -->
+                <div class="flex items-center gap-6">
+                    <div class="w-16 h-16 rounded-full bg-rustic-wood flex items-center justify-center shrink-0 shadow-md">
+                        <span class="text-3xl">🪗</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-rustic-green mb-1">Akce a oslavy</h3>
+                        <p class="text-gray-600">Živá hudba, country večery, zabijačkové hody nebo možnost soukromé oslavy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spodní část: QR kód a kontakt -->
+        <div class="bg-rustic-green text-white p-8 border-t-[8px] border-rustic-wood flex justify-between items-center">
+            <div class="w-2/3 pr-6">
+                <h2 class="text-2xl font-serif font-bold mb-3 text-amber-500">Máte hlad nebo žízeň?</h2>
+                <p class="mb-4 text-gray-200">Naskenujte QR kód chytrým telefonem a prohlédněte si náš kompletní jídelní lístek, otevírací dobu a chystané akce.</p>
+                <div class="flex items-center gap-4 text-sm font-medium text-emerald-100">
+                    <span>📍 Kocourkov 29</span>
+                    <span>|</span>
+                    <span>📞 +420 999 999 999</span>
+                </div>
+            </div>
+            
+            <!-- QR Kód (generovaný automaticky z API podle zadané URL) -->
+            <div class="w-1/3 flex justify-end">
+                <div class="bg-white p-3 rounded-xl shadow-lg">
+                    <!-- Zde je odkaz na tvou ukázkovou doménu, po naskenování se otevře tvůj web -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://prijimackyeasy.cz/hospoda" alt="QR Kód Menu" class="w-32 h-32">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
